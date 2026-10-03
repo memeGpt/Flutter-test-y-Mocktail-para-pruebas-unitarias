@@ -1,17 +1,82 @@
-# pruebas_flutter
+# Pruebas unitarias con Flutter Test y Mocktail
 
-A new Flutter project.
+Proyecto de ejemplo desarrollado para demostrar el uso de **Flutter Test** y **Mocktail** en pruebas unitarias con Flutter.
 
-## Getting Started
+## Objetivo
 
-This project is a starting point for a Flutter application.
+El proyecto simula un pequeño inventario de productos y permite comprobar diferentes comportamientos mediante pruebas automatizadas.
 
-A few resources to get you started if this is your first Flutter project:
+## Estructura principal
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```text
+lib/
+├── models/
+│   └── producto.dart
+├── services/
+│   └── producto_service.dart
+└── controllers/
+    └── inventario_controller.dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+test/
+└── inventario_controller_test.dart
+```
+
+## Tecnologías utilizadas
+
+- Flutter
+- Dart
+- Flutter Test
+- Mocktail
+
+## Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone <https://github.com/memeGpt/Flutter-test-y-Mocktail-para-pruebas-unitarias>
+```
+
+Entrar a la carpeta del proyecto:
+
+```bash
+cd pruebas_flutter
+```
+
+Descargar las dependencias:
+
+```bash
+flutter pub get
+```
+
+## Ejecutar las pruebas
+
+Para ejecutar todas las pruebas:
+
+```bash
+flutter test
+```
+
+Para mostrar el nombre de cada prueba:
+
+```bash
+flutter test -r expanded
+```
+
+## Casos de prueba incluidos
+
+El proyecto contiene pruebas para verificar:
+
+- Si un producto con stock está disponible.
+- Si un producto sin stock no está disponible.
+- El cálculo del valor total del inventario.
+- El conteo de productos disponibles.
+
+Mocktail se utiliza para simular el servicio encargado de obtener los productos, evitando depender de una base de datos o API real.
+
+## Resultado esperado
+
+Cuando todas las pruebas se ejecutan correctamente, Flutter muestra:
+
+```text
+All tests passed!
+```
